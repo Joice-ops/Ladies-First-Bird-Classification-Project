@@ -18,7 +18,7 @@ The images feature various environments due to the diverse habitats of the birds
 All images were rescaled so that each pixel would be in range of [0,1]. Augmentation (rotation, width and height shift, shear, zoom, horizontal flip) was used to avoid overfitting and increase the variation in the training image. 
 
 ## Model Creation
-The following CNN model with 4 layes was used:
+The following CNN model with 4 layers were used:
 - **First Conv2D layer**
   - filters=32
   - kernel_size=3
