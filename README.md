@@ -6,13 +6,12 @@ All images are 224×224×3 color images after cropping, with cropping ensuring t
 ## Bird Species Selection
 The 15 bird species are selected based on the following criteria:
 1. Minimizing interspecies variation
-   a. Individuals differ - Jacobin Pigeon
-   b. Sexual dimorphism ( Male and female have different color and pattern ) - Ostrich
-   (This is specially noted on the data source page that 80% of the images are of the males and 20% of the females.)
-   c. Juvenile and adult are different - Canada Goose (Although not included in the dataset)
-2. Maximizing intraspecies variation
+   - Individuals differ - Jacobin Pigeon
+   - Sexual dimorphism ( Male and female have different color and pattern ) - Ostrich (This is specially noted on the data source page that 80% of the images are of the males and 20% of the females.)
+   - Juvenile and adult are different - Canada Goose (Although not included in the dataset)
+3. Maximizing intraspecies variation
 It was noted that birds can have different postures in the images. In most images, the head is well-shown. Therefore, bill variation among different species was maximized when selecting the 15 species. - American Avocet
-3. Reducing the environment noise
+4. Reducing the environment noise
 The images feature various environments due to the diverse habitats of the birds. Birds that are camouflaged into their environment were avoided. - Tawny FrogMouth
 
 ## Preprocessing
@@ -37,7 +36,7 @@ The following CNN model with 4 layes was used:
   - kernel_size=3
   - activation='relu'
  
-# INSERT MODEL SUMMARY
+## Model Summary
 - The classification model performed very well, achieving an overall accuracy of 92% across 15 bird species.
 - The lowest accuracy of 0.67 in Iwi, and 0.75 in Bald Eagle. Except Iwi and Bald Eagle, all precision and recall of other species exceed 0.80.
 - The macro and weighted averages for precision, recall, and F1-score are all close to 0.92-0.94, confirming the model's effectiveness across the different classes.
